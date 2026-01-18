@@ -1,4 +1,4 @@
-const socket = new WebSocket("ws://localhost:3000");
+const socket = new WebSocket(`ws://${window.location.host}`);
 const form = document.getElementById("form");
 const input = document.getElementById("input") as HTMLInputElement;
 const messages = document.getElementById("messages") as HTMLDivElement;
