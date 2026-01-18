@@ -1,0 +1,16 @@
+{
+	"name": "chat",
+	"module": "app.ts",
+	"type": "module",
+	"private": true,
+	"scripts": {
+		"dev": "bun --watch app.ts"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "2.3.11",
+		"@types/bun": "latest"
+	},
+	"peerDependencies": {
+		"typescript": "^5"
+	}
+}
