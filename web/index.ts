@@ -1,4 +1,10 @@
-const socket = new WebSocket(`wss://${window.location.host}`);
+const getWebSocketURL = () => {
+    const protocol = window.location.protocol === "https:" ? "wss:" : "ws:";
+    const host = window.location.host;
+    return `${protocol}//${host}`;
+};
+
+const socket = new WebSocket(getWebSocketURL());
 const form = document.getElementById("form");
 const input = document.getElementById("input") as HTMLInputElement;
 const messages = document.getElementById("messages") as HTMLDivElement;

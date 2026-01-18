@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
     <title>Chat</title>
 </head>
 
@@ -12,8 +13,10 @@
         <h1>Welcome!</h1>
         <section id="messages"></section>
         <form id="form">
-            <input id="input" type="text">
-            <button id="send" type="submit"></button>
+            <fieldset role="group">
+                <input id="input" type="text">
+                <button id="send" type="submit">Send</button>
+            </fieldset>
         </form>
     </main>
     <script type="module" src="./index.ts"></script>

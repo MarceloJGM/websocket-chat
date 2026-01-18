@@ -17,12 +17,12 @@ const server = serve({
 
     websocket: {
         open(ws) {
-            console.log("Connected");
-            ws.send("Connected");
+            ws.send("Connected!");
+            ws.subscribe("chat");
         },
 
         message(ws, message) {
-            console.log(`Message: ${message}`);
+            ws.publish("chat", message);
             ws.send(message);
         },
 
